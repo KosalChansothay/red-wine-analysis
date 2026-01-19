@@ -1,0 +1,179 @@
+/*-- scss:defaults --*/
+
+$presentation-heading-color: #2c3e50;
+$link-color: #3498db;
+$code-block-bg: #f8f9fa;
+
+/*-- scss:rules --*/
+
+/* Better code folding appearance */
+.code-fold-btn-container {
+    margin-bottom: 0.5rem;
+}
+
+.code-fold-btn {
+    background-color: #3498db !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 4px !important;
+    font-size: 0.8rem !important;
+}
+
+.code-fold-btn:hover {
+    background-color: #2980b9 !important;
+}
+
+/* Callout styling */
+.callout {
+    border-radius: 8px !important;
+    margin: 1rem 0 !important;
+}
+
+.callout-tip {
+    background-color: #e8f6f3 !important;
+    border-left-color: #1abc9c !important;
+}
+
+.callout-note {
+    background-color: #ebf5fb !important;
+    border-left-color: #3498db !important;
+}
+
+.callout-important {
+    background-color: #fdedec !important;
+    border-left-color: #e74c3c !important;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 1rem 0 !important;
+}
+
+th,
+td {
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+    text-align: left !important;
+}
+
+th {
+    background-color: #3498db !important;
+    color: white !important;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2 !important;
+}
+
+/* Slide title styling */
+.reveal h1 {
+    color: #2c3e50 !important;
+    font-size: 2rem !important;
+}
+
+.reveal h2 {
+    color: #34495e !important;
+    font-size: 1.5rem !important;
+    border-bottom: 2px solid #3498db !important;
+    padding-bottom: 0.3rem !important;
+}
+
+.reveal h3 {
+    color: #2980b9 !important;
+    font-size: 1.2rem !important;
+}
+
+/* Column layout improvements */
+.columns {
+    display: flex !important;
+    gap: 2rem !important;
+}
+
+/* Better list styling */
+.reveal ul,
+.reveal ol {
+    margin-left: 1rem !important;
+}
+
+.reveal li {
+    margin-bottom: 0.5rem !important;
+}
+
+/* Code block styling */
+.reveal pre {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 8px !important;
+}
+
+/* Footer styling */
+.reveal .footer {
+    font-size: 0.7rem !important;
+    color: #7f8c8d !important;
+}
+
+/* Print optimization for Ctrl+P */
+@media print {
+    .reveal .slides {
+        height: auto !important;
+        width: auto !important;
+        overflow: visible !important;
+    }
+
+    .reveal .slides section {
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        display: block !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    .reveal .slides section.present {
+        display: block !important;
+    }
+
+    .reveal .controls,
+    .reveal .progress,
+    .reveal .slide-number {
+        display: none !important;
+    }
+
+    .plotly-graph-div {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Ensure all slides print */
+    .reveal .slides section.future,
+    .reveal .slides section.past {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Better sizing for print */
+    .reveal {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Incremental list animation */
+.reveal .slides section .fragment.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Center class for slides */
+.center {
+    text-align: center !important;
+}
+
+.center h2 {
+    border-bottom: none !important;
+}
